@@ -25,12 +25,14 @@ body {
 .caixaApp {
 
     /*modificar*/
-    background-color: rgb(77, 42, 13);
+    background-color: rgb(255, 255, 255);
     width: 450px;
     /*modificar*/
     padding: 25px;
     /*modificar*/
     border-radius: 25px;
+    
+    }
 
     .texto {
         width: 100%;
@@ -38,7 +40,7 @@ body {
         border: none;
         outline: none;
         /* borda quando clica*/
-        background-color: #ffffff1a;
+        background-color: #7a53531a;
         /*modificar*/
         color: rgb(153, 127, 151);
         /*cor do texto -modificar*/
@@ -49,18 +51,48 @@ body {
 
     .tradução {
         padding: 15px;
-        background-color: #ffffff1a;
+        background-color: #7a53531a;
     }
 
     .traducao {
         font-size: 18px;
         /*modificar */
-        color: #ffffff99;
+        color: #524d4d99;
         /*modificar*/
     }
 
-    .titulo-traducao color: #ffffff99;
+    .titulo-traducao { color: #00000099;
     font-size: 14px;
     margin-bottom: 10px;
     border-radius: 15px;
+}
+
+.caixa-interna {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px auto;
+}
+.idioma {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    background-color: rgba(68, 35, 35, 0.102);
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgba(68, 35, 35, 0.102);
+    cursor: pointer;
+    color: blue;
+}
+
+button:hover{
+    opacity: 0.7;
 }
