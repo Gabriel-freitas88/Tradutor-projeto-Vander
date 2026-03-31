@@ -1,20 +1,18 @@
 
 let inputTexto = document.querySelector(".texto");
 
-let idioma= document.querySelector(".idioma");
+let idioma = document.querySelector(".idioma");
 
-let traducao = document.querySelector(".traducao");
+let traducaoSaida = document.querySelector(".traducao");
 
-async function traduzir(){
-
-
-let url = "https://api.mymemory.translated.net/get?q=Bom%20dia!&langpair=pt|en";
-
-let resposta = await fetch(url);
-
-let traducao = await resposta.json();
-
-console.log(traducao.responseData.translatedText);
+async function traduzir() {
 
 
+    let url = "https://api.mymemory.translated.net/get?q="+ inputTexto.value +"&langpair=pt|" + idioma.value;
+
+    let resposta = await fetch(url);
+
+    let traducao = await resposta.json();
+
+    traducaoSaida.textContent=traducao.responseData.translatedText;
 }
