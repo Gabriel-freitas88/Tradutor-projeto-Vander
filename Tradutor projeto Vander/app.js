@@ -16,3 +16,17 @@ async function traduzir() {
 
     traducaoSaida.textContent=traducao.responseData.translatedText;
 }
+
+function microfone() {
+    //classe
+    let voz =  window.SpeechRecognition || window.webkitSpeechRecognition;
+    //instainciano (construir)
+    let ouvirVoz = new voz();
+
+    ouvirVoz.onresult = (evento)=> {
+        inputTexto.value = evento.results[0][0].transcript;
+
+    }
+
+    ouvirVoz.start();
+}
